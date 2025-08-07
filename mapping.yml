@@ -1,0 +1,12 @@
+mappings:
+- match: truenas.scale.zfs.pool.*.*
+  match_type: glob
+  name: "truenas_zfs_pool_${2}"
+  labels:
+    pool: "${1}"
+
+- match: truenas.scale.smart.disk.*.*
+  match_type: glob
+  name: "truenas_smart_attribute_${2}"
+  labels:
+    disk: "${1}"
