@@ -1,4 +1,4 @@
-# Grafana Dashboard for TrueNAS SCALE with Advanced ZFS & S.M.A.R.T. Stats
+# Grafana Dashboard for TrueNAS SCALE with Advanced ZFS & S.M.A.R.T. Stats (prometheus data source)
 
 This project provides a comprehensive monitoring setup for TrueNAS SCALE using Prometheus and Grafana. Its unique feature is a small helper script that collects detailed ZFS pool and S.M.A.R.T. data, which is often not gathered by standard exporters.
 
