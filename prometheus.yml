@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'graphite'
+    static_configs:
+      - targets: ['YOUR_TRUENAS_IP:9108']
+
+  # Add a scrape job for the TrueNAS SCALE exporter here
+  # Example for the widely used node_exporter
+  - job_name: 'truenas-system'
+    static_configs:
+      - targets: ['YOUR_TRUENAS_IP:9100']
