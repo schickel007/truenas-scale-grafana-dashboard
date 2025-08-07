@@ -1,0 +1,31 @@
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - 3100:3000
+    volumes:
+      - ./grafana-storage:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=CHANGE_ME
+      - GF_SECURITY_ADMIN_PASSWORD=CHANGE_ME
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  prometheus_graphite_exporter:
+    image: prom/graphite-exporter:latest
+    container_name: prometheus_graphite_exporter
+    restart: unless-stopped
+    network_mode: host
+    command:
+      - --graphite.mapping-config=/etc/graphite-exporter/mapping.yml
+      - --graphite.listen-address=:2003
+    volumes:
+      - ./graphite-mapping/mapping.yml:/etc/graphite-exporter/mapping.yml
+networks: {}
