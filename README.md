@@ -2,8 +2,7 @@
 
 This project provides a comprehensive monitoring setup for TrueNAS SCALE using Prometheus and Grafana. Its unique feature is a small helper script that collects detailed ZFS pool and S.M.A.R.T. data, which is often not gathered by standard exporters.
 
-![Dashboard Screenshot](URL_ZUM_SCREENSHOT_HIER_EINFUEGEN)
-*(Hint: You can upload a screenshot of your dashboard to the repository and link to it here)*
+Screenshots are in the grafana-screenshots folder
 
 ## Dashboard Features
 - **System Overview:** Uptime and System Load.
