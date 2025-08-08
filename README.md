@@ -29,6 +29,7 @@ Create the following directory structure for your project. You can find all nece
 ```
 /path/to/your/monitoring/
 |-- compose.yaml
+|-- prometheus-data/
 |-- prometheus.yml
 |-- dashboard.json
 |-- grafana-storage/
