@@ -18,6 +18,7 @@ services:
       - 9090:9090
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus-data:/prometheus
   prometheus_graphite_exporter:
     image: prom/graphite-exporter:latest
     container_name: prometheus_graphite_exporter
